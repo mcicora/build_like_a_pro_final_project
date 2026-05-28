@@ -23,6 +23,36 @@ section {
     padding: 0 32px;
 }
 
+button {
+    cursor: pointer;
+}
+
+.purple {
+    color: #6415ff;
+}
+
+.container {
+    padding: 96px 0;
+}
+
+header .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img {
+    width: 100%;
+}
+
+.row__narrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
 
 /* 
 
@@ -94,10 +124,7 @@ nav {
     background-color: transparent;
     border: none;
     display: none;
-}
-
-button {
-    cursor: pointer;
+    transition: all 300ms ease;
 }
 
 .menu {
@@ -143,6 +170,12 @@ button {
     border: none;
 }
 
+.btn__men--close {
+    position: fixed;
+    top: 24px;
+    right: 18px;
+}
+
 
 /*
 
@@ -166,6 +199,7 @@ Header
     border: 2px solid rgb(229, 231, 235);
     padding: 20px 192px 20px 32px;
     color: rgb(36, 62, 99);
+    font-size: 16px;
     font-weight: 500;
     position: absolute;
     top: 0;
@@ -174,15 +208,39 @@ Header
     transition: border-color 300ms;
 }
 
-.header__row {
-    align-items: flex-end;
-    
+.header__email--btn {
+    z-index: 2;
+    margin: 8px;
+    height: calc(100% - 16px);
+    border-radius: 500px;
+    width: 160px;
+    border: none;
+    background-color: #6415ff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 300ms ease;
+}
+
+.header__customers--title {
+    margin-top: 80px;
+    color: #a0aec0;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.header__customers {
+    margin-top: 16px;
+    padding-right: 128px;
+    opacity: 0.5;
 }
 
 .header__description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 40%;
+}
+
+.header__description--para {
+    margin: 32px 0;
 }
 
 .header__img {
@@ -190,6 +248,234 @@ Header
     max-width: 60%;
 }
 
+.header__img--wrapper {
+    width: calc(100% - 40%);
+}
+
+
+
+
+/*
+
+FEATURES
+
+*/
+
+#features {
+    position: relative;
+}
+
+.section__tag {
+    font-size: 16px;
+    color: #6415ff;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#features .section__title {
+    text-align: center;
+}
+
+.section__title {
+    font-size: 48px;
+    font-weight: 900px;
+    color: rgb(36, 62, 99);
+    line-height: 1.5;
+    margin: 16px 0;
+    letter-spacing: 0.025em;
+}
+
+#features .section__para {
+    text-align: center;
+    max-width: 576px;
+}
+
+.section__para {
+    font-size: 18px;
+    font-weight: 500;
+    color: #7c8ba1;
+    line-height: 1.625;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.feature {
+    width: calc(100% / 3);
+}
+
+.feature__row {
+    display: flex;
+    align-items: flex-start;
+    padding: 32px 24px;
+}
+
+.feature__img--wrapper {
+    display: flex;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 500px;
+}
+
+.feature__img {
+    width: 24px;
+    height: 24px;
+}
+
+.feature__text {
+    margin-top: 8px;
+    margin-left: 16px;
+}
+
+.feature__para {
+    margin-top: 16px;
+    font-size: 16px;
+    max-width: calc(634px / 3);
+    color: rgb(124, 139, 161);
+    line-height: 2;
+    font-weight: 500;
+}
+
+
+/*
+
+QUALITY
+
+*/
+
+.quality__description, .quality__img--wrapper {
+    width: 50%;
+}
+
+#quality .btn {
+    margin-top: 32px;
+}
+
+.btn {
+    background-color: #6415ff;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 500px;
+    color: #fff;
+    font-weight: bold;
+    transition: all 300ms ease;
+}
+
+.quality__img--wrapper {
+    border-radius: 4px;
+    border: 1px solid rgb(229, 231, 235);
+    position: relative;
+    margin: 0 56px;
+    z-index: 2;
+    display: flex;
+}
+
+#quality .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quality__img {
+    z-index: 1;
+}
+
+.quality__grid {
+    transform: translateX(50%) translateY(50%) scaleX(1);
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    fill: rgb(100, 21, 255);
+    z-index: 0;
+    display: block;
+}
+
+
+/*
+
+STEPS
+
+*/
+
+#steps .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.steps__description,
+.steps__img--wrapper {
+    width: 50%;
+}
+
+.steps__img--wrapper {
+    display: flex;
+    position: relative;
+}
+
+.steps {
+    z-index: 2;
+}
+
+.steps__grid {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: 10rem;
+    opacity: 0.8;
+    z-index: -10;
+    color: rgb(100, 21, 255);
+    fill: currentColor;
+}
+
+.steps__description {
+    padding: 32px 0;
+    padding-left: 64px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 32px;
+}
+
+.step__number {
+    color: #cbd5e0;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.step__description {
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px; 
+    max-width: 320px; 
+}
+
+.step__title {
+    font-weight: 600;
+    font-size: 20px;
+    color: #243e63;
+    line-height: 1;
+}
+
+.step__para {
+    font-size: 14px;
+    color: #718096;
+    margin-top: 12px;
+    font-weight: 500;
+    line-height: 2;
+
+}
 
 /*
 
@@ -197,9 +483,56 @@ MOBILE RESPONSIVE
 
 */
 
+@media (max-width: 1280px) {
+    header .row {
+        align-items: flex-end;
+    }
+
+    h1 {
+        font-size: 36px;
+        color: #1a202c;
+        line-height: 1.25;
+    }
+
+    .header__description--para {
+        font-size: 16px;
+    }
+
+    .header__customers {
+        padding-right: 64px;
+    }
+
+    .header__img--wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .header__img {
+        max-width: 512px;
+    }
+
+    .steps__grid {
+    height: 5rem;
+    width: 5rem;
+    bottom: -50px;
+}
+}
+
 @media (max-width: 1024px) {
     header .row {
         flex-direction: column;
         align-items: center;
     }
+
+    .btn__menu {
+        display: block;
+    }
+
+    .nav__links {
+        display: none;
+    }
+
+    .header__description--para {
+    font-size: 16px;
+}
 }
