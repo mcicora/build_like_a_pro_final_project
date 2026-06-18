@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="browse.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="row">
+                <div class="nav__top">
+                    <img class="nav__logo" src="https://previews.123rf.com/images/ylivdesign/ylivdesign1211/ylivdesign121100088/16526995-blue-movie-logo-on-a-black-background.avif" alt="">
+                    <div class="nav__links">
+                        <a href="#" class="nav__link">Home</a>
+                        <a href="Browse Movies" class="nav__link">Browse Movies</a>
+                        <a href="#" class="nav__link nav__btn">Contact</a>
+                    </div>
+                </div>
+                <div class="nav__content--wrapper">
+                    <h1 class="nav__content--title">Browse Our Movies</h1>
+                    <div class="nav__input--wrapper">
+                        <input class="nav__input" type="text" placeholder="Search by Title or Year">
+                        <div class="nav__content--search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="search">
+        <div class="search__bar">
+            <h1 class="search__info">
+                <span class="text__color">Search Results:</span>
+            </h1>
+            <div class="search__content--info">
+                <select id="filter" class="search__bar--filter" onchange="filterMovies(event)">
+                    <option value disabled selected>Sort</option>
+                    <option value="A_TO_Z">A to Z</option>
+                    <option value="Z_TO_A"> Z to A</option>
+                    <option value="NEWEST_TO_OLDEST">Newest to Oldest</option>
+                    <option value="OLDEST_TO_NEWEST">Oldest to Newest</option>
+                </select>
+            </div>
+        </div>
+        <div id="movies"></div>
+    </section>
+    <footer>
+        <div class="container footer__container">
+            <div class="row footer__row ">
+                <img class="footer__logo" src="https://previews.123rf.com/images/ylivdesign/ylivdesign1211/ylivdesign121100088/16526995-blue-movie-logo-on-a-black-background.avif" alt="">
+                <p class="footer__text">Copyright &copy;  Marc Cicora 2026</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
